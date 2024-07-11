@@ -15,50 +15,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-//import com.sun.javadoc.DocErrorReporter;
-//import com.sun.javadoc.LanguageVersion;
-//import com.sun.javadoc.RootDoc;
-
-///**
-// * A <a href="http://java.sun.com/javase/6/docs/jdk/api/javadoc/doclet/">Doclet</a>
-// * that only includes class-level elements that are annotated with
-// * {@link org.apache.hadoop.classification.InterfaceAudience.Public}.
-// * Class-level elements with no annotation are excluded.
-// * In addition, all elements that are annotated with
-// * {@link org.apache.hadoop.classification.InterfaceAudience.Private} or
-// * {@link org.apache.hadoop.classification.InterfaceAudience.LimitedPrivate}
-// * are also excluded.
-// * It delegates to the Standard Doclet, and takes the same options.
-// */
-//public class IncludePublicAnnotationsStandardDoclet {
-//
-//  public static LanguageVersion languageVersion() {
-//    return LanguageVersion.JAVA_1_5;
-//  }
-//
-//  public static boolean start(RootDoc root) {
-//    System.out.println(
-//        IncludePublicAnnotationsStandardDoclet.class.getSimpleName());
-//    RootDocProcessor.treatUnannotatedClassesAsPrivate = true;
-//    return Standard.start(RootDocProcessor.process(root));
-//  }
-//
-//  public static int optionLength(String option) {
-//    Integer length = StabilityOptions.optionLength(option);
-//    if (length != null) {
-//      return length;
-//    }
-//    return StandardDoclet.optionLength(option);
-//  }
-//
-//  public static boolean validOptions(String[][] options,
-//      DocErrorReporter reporter) {
-//    StabilityOptions.validOptions(options, reporter);
-//    String[][] filteredOptions = StabilityOptions.filterOptions(options);
-//    return Standard.validOptions(filteredOptions, reporter);
-//  }
-//}
-
 package org.apache.hadoop.classification.tools;
 import java.util.Locale;
 import java.util.Set;
@@ -67,9 +23,6 @@ import jdk.javadoc.doclet.Doclet;
 import jdk.javadoc.doclet.DocletEnvironment;
 import jdk.javadoc.doclet.Reporter;
 import jdk.javadoc.doclet.StandardDoclet;
-import javax.lang.model.element.Element;
-//import static org.apache.hadoop.classification.tools.RootDocProcessor.treatUnannotatedClassesAsPrivate;
-//import static org.apache.hadoop.classification.tools.RootDocProcessor.process;
 
 /**
  * A Doclet that only includes class-level elements that are annotated with

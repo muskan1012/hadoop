@@ -17,10 +17,6 @@
  */
 package org.apache.hadoop.classification.tools;
 
-//import com.sun.javadoc.DocErrorReporter;
-//import com.sun.javadoc.LanguageVersion;
-//import com.sun.javadoc.RootDoc;
-//import jdiff.JDiff;
 import jdk.javadoc.doclet.Doclet;
 import jdk.javadoc.doclet.Reporter;
 import javax.lang.model.SourceVersion;
@@ -53,32 +49,6 @@ public class IncludePublicAnnotationsJDiffDoclet implements Doclet {
 
   private Reporter reporter;
   private StandardDoclet standardDoclet = new StandardDoclet();
-
-//  public static SourceVersion SourceVersion() {
-//    return SourceVersion.latest();
-//  }
-//
-//  public static boolean start(RootDoc root) {
-//    System.out.println(
-//        IncludePublicAnnotationsJDiffDoclet.class.getSimpleName());
-//    RootDocProcessor.treatUnannotatedClassesAsPrivate = true;
-//    return JDiff.start(RootDocProcessor.process(root));
-//  }
-//
-//  public static int optionLength(String option) {
-//   Integer length = StabilityOptions.optionLength(option);
-//    if (length != null) {
-//      return length;
-//    }
-//    return JDiff.optionLength(option);
-//  }
-//
-//  public static boolean validOptions(String[][] options,
-//      DocErrorReporter reporter) {
-//    StabilityOptions.validOptions(options, reporter);
-//    String[][] filteredOptions = StabilityOptions.filterOptions(options);
-//    return JDiff.validOptions(filteredOptions, reporter);
-//  }
 
   @Override
   public void init(Locale locale, Reporter reporter) {

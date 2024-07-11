@@ -17,7 +17,6 @@
  */
 package org.apache.hadoop.classification.tools;
 
-//import com.sun.javadoc.DocErrorReporter;
 import jdk.javadoc.doclet.Reporter;
 
 import java.util.ArrayList;

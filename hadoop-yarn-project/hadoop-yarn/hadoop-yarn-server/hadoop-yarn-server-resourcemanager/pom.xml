@@ -65,13 +65,14 @@
     <dependency>
     <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
+      <version>3.11.2</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-inline</artifactId>
-      <version>2.8.9</version>
-      <scope>test</scope>
+      <version>4.6.1</version>
+      <scope>provided</scope>
     </dependency>
     <!-- 'mvn dependency:analyze' fails to detect use of this dependency -->
     <dependency>
@@ -341,6 +342,19 @@
          <groupId>com.fasterxml.jackson.core</groupId>
          <artifactId>jackson-databind</artifactId>
      </dependency>
+    <!-- Override Byte Buddy versions -->
+    <dependency>
+      <groupId>net.bytebuddy</groupId>
+      <artifactId>byte-buddy</artifactId>
+      <version>1.12.8</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.bytebuddy</groupId>
+      <artifactId>byte-buddy-agent</artifactId>
+      <version>1.12.8</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
